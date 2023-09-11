@@ -1,0 +1,56 @@
+.task-form {
+  background-image: url('https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto; /* Center the form horizontally and add margin for spacing */
+  border-radius: 5px;
+  max-width: 400px; /* Limit the maximum width for larger screens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.task-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Adjust input and textarea styles */
+.task-form input[type='text'],
+.task-form textarea,
+.task-form input[type='date'],
+.task-form .Date,
+.task-form .Time {
+  background-image: url('https://w0.peakpx.com/wallpaper/338/1021/HD-wallpaper-white-crumpled-paper-texture-white-paper-background-paper-texture-paper.jpg');
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make input elements full width */
+}
+
+/* Add a responsive style for input elements on hover */
+.task-form input[type='text']:hover,
+.task-form textarea:hover,
+.task-form input[type='date']:hover,
+.task-form .Date:hover,
+.task-form .Time:hover {
+  text-shadow: 0 0 10px yellow;
+}
+
+.task-form button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%; /* Make the button full width */
+}
+
+.task-form button[type='submit']:hover {
+  background-color: #0056b3;
+}

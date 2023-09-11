@@ -1,38 +1,42 @@
+/* Global Styles */
 .App {
+  font-family: cursive, Lucida Handwriting;
   text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1542856391-010fb87dcfed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&w=1000&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2.5em; /* Responsive font size */
+  font-style: italic;
+  margin-bottom: 20px;
+  color: black;
+  padding: 10px;
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgb(239, 7, 7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1:hover {
+  text-shadow: 0 0 10px yellow;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom-toast-container {
+  top: 0;
+  right: 0;
+  width: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.Toastify__toast {
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.6em; /* Responsive font size */
+  padding: 1.2em; /* Responsive padding */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Toastify__close-button {
+  color: #fff;
+  font-size: 1.6em; /* Responsive font size */
 }

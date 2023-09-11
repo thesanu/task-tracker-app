@@ -1,0 +1,58 @@
+.task-list {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next row on smaller screens */
+  gap: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-content: center; /* Center items horizontally */
+}
+
+.task-item {
+  background-image: url('https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Make items full width on smaller screens */
+  max-width: 350px; /* Limit maximum width for larger screens */
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Combine transition properties */
+}
+
+.task-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Adjust box shadow on hover */
+}
+
+.completed {
+  background-color: #e8f6e8;
+  text-decoration: line-through;
+}
+
+/* Adjust button styles for responsiveness */
+.edit-button,
+.delete-button,
+.toggle-button {
+  background-color: #fff;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.toggle-button:hover {
+  background-color: #3de006;
+}
+
+.edit-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: red;
+}

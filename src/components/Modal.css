@@ -1,0 +1,62 @@
+.modal-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px; /* Limit the maximum width for larger screens */
+  margin: 0 auto;
+  margin-top: 10%; /* Adjust the margin-top to position the modal vertically */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Adjust input and textarea styles */
+.modal-content input[type='text'],
+.modal-content textarea,
+.modal-content input[type='date'],
+.modal-content input[type='time'] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make input elements full width */
+}
+
+/* Add responsive styles for input elements on hover */
+.modal-content input[type='text']:hover,
+.modal-content textarea:hover,
+.modal-content input[type='date']:hover,
+.modal-content input[type='time']:hover {
+  text-shadow: 0 0 10px yellow;
+}
+
+/* Adjust the width of date and time inputs */
+.modal-content input[type='date'] {
+  width: 100px;
+}
+
+.modal-content input[type='time'] {
+  width: 80px;
+}
+
+.modal-content .save-button,
+.modal-content .cancel-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+  width: 100%; /* Make the buttons full width */
+}
+
+.modal-content .save-button:hover,
+.modal-content .cancel-button:hover {
+  background-color: #0056b3;
+}
