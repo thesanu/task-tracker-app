@@ -1,42 +1,49 @@
 /* Global Styles */
+
+/* Styling for the root element of the application */
 .App {
-  font-family: cursive, Lucida Handwriting;
-  text-align: center;
-  background-image: url('https://images.unsplash.com/photo-1542856391-010fb87dcfed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&w=1000&q=80');
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 10px;
+  font-family: cursive, Lucida Handwriting; /* Font for the entire app */
+  text-align: center; /* Center-align text within the container */
+  background-image: url('https://images.unsplash.com/photo-1542856391-010fb87dcfed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&w=1000&q=80'); /* Background image URL */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-repeat: no-repeat; /* Prevent background image repetition */
+  padding: 10px; /* Padding around the content within the container */
 }
 
+/* Styling for level 1 headings (h1) */
 h1 {
   font-size: 2.5em; /* Responsive font size */
-  font-style: italic;
-  margin-bottom: 20px;
-  color: black;
-  padding: 10px;
-  text-decoration: underline;
-  text-shadow: 0 0 10px rgb(239, 7, 7);
+  font-style: italic; /* Italic font style */
+  margin-bottom: 20px; /* Space below the heading */
+  color: black; /* Text color */
+  padding: 10px; /* Padding around the heading */
+  text-decoration: underline; /* Underline text */
+  text-shadow: 0 0 10px rgb(239, 7, 7); /* Text shadow with red color */
 }
 
+/* Hover effect for h1 */
 h1:hover {
-  text-shadow: 0 0 10px yellow;
+  text-shadow: 0 0 10px yellow; /* Text shadow changes to yellow on hover */
 }
 
+/* Styling for custom toast container */
 .custom-toast-container {
-  top: 0;
-  right: 0;
-  width: auto;
+  top: 0; /* Position it at the top of the container */
+  right: 0; /* Position it at the right side of the container */
+  width: auto; /* Automatically adjust the width */
 }
 
+/* Styling for individual toast notifications */
 .Toastify__toast {
-  background-color: #333;
-  color: #fff;
-  border-radius: 4px;
+  background-color: #333; /* Background color of the toast */
+  color: #fff; /* Text color in the toast */
+  border-radius: 4px; /* Rounded corners for the toast */
   font-size: 1.6em; /* Responsive font size */
-  padding: 1.2em; /* Responsive padding */
+  padding: 1.2em; /* Responsive padding around the toast */
 }
 
+/* Styling for the close button in toast notifications */
 .Toastify__close-button {
-  color: #fff;
+  color: #fff; /* Color of the close button */
   font-size: 1.6em; /* Responsive font size */
 }

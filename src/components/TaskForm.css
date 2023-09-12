@@ -1,56 +1,60 @@
+/* Styling for the task form container */
 .task-form {
-  background-image: url('https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&w=600');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 1px solid #ccc;
-  padding: 20px;
+  background-image: url('https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Background image URL */
+  background-size: cover; /* Cover the container with the background image */
+  background-repeat: no-repeat; /* Prevent background image repetition */
+  border: 1px solid #ccc; /* Border around the form */
+  padding: 20px; /* Padding inside the form */
   margin: 20px auto; /* Center the form horizontally and add margin for spacing */
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded corners for the form */
   max-width: 400px; /* Limit the maximum width for larger screens */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle 3D effect */
 }
 
+/* Styling for the form within the task form container */
 .task-form form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+  display: flex; /* Display form elements in a flex container */
+  flex-direction: column; /* Arrange form elements in a column layout */
+  padding: 10px; /* Padding inside the form */
 }
 
-/* Adjust input and textarea styles */
+/* Adjust styles for input and textarea elements */
 .task-form input[type='text'],
 .task-form textarea,
 .task-form input[type='date'],
 .task-form .Date,
 .task-form .Time {
-  background-image: url('https://w0.peakpx.com/wallpaper/338/1021/HD-wallpaper-white-crumpled-paper-texture-white-paper-background-paper-texture-paper.jpg');
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background-image: url('https://w0.peakpx.com/wallpaper/338/1021/HD-wallpaper-white-crumpled-paper-texture-white-paper-background-paper-texture-paper.jpg'); /* Background image URL for input elements */
+  margin: 10px 0; /* Margin above and below input elements */
+  padding: 10px; /* Padding inside input elements */
+  border: 1px solid #ccc; /* Border around input elements */
+  border-radius: 4px; /* Rounded corners for input elements */
   width: 100%; /* Make input elements full width */
 }
 
-/* Add a responsive style for input elements on hover */
+/* Add a responsive hover effect for input elements */
 .task-form input[type='text']:hover,
 .task-form textarea:hover,
 .task-form input[type='date']:hover,
 .task-form .Date:hover,
 .task-form .Time:hover {
-  text-shadow: 0 0 10px yellow;
+  text-shadow: 0 0 10px yellow; /* Apply a yellow text shadow on hover */
 }
 
+/* Styling for the submit button within the task form */
 .task-form button[type='submit'] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
+  background-color: #007bff; /* Background color for the submit button */
+  color: #fff; /* Text color for the submit button */
+  border: none; /* Remove button border */
+  padding: 10px 20px; /* Padding inside the button */
+  margin-top: 10px; /* Margin above the button */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  border-radius: 4px; /* Rounded corners for the button */
+  font-size: 16px; /* Font size for the button text */
   width: 100%; /* Make the button full width */
 }
 
+/* Add a hover effect for the submit button */
 .task-form button[type='submit']:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Background color change on hover */
 }

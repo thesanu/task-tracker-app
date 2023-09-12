@@ -1,3 +1,4 @@
+// Import necessary components and styles
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useState, useEffect } from 'react';
@@ -6,21 +7,26 @@ import TaskList from './components/TaskList';
 import './App.css';
 
 function App() {
+  // Initialize state to hold the list of tasks
   const [tasks, setTasks] = useState([]);
 
+  // Load tasks from localStorage when the component mounts
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     setTasks(savedTasks);
   }, []);
 
+  // Save tasks to localStorage whenever the tasks state changes
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
+  // Function to add a new task to the list
   const addTask = (newTask) => {
     setTasks([...tasks, newTask]);
   };
 
+  // Function to edit an existing task in the list
   const editTask = (editedTask) => {
     const updatedTask = tasks.map((task) =>
       task.id === editedTask.id ? editedTask : task
@@ -28,11 +34,13 @@ function App() {
     setTasks(updatedTask);
   };
 
+  // Function to delete a task from the list
   const deleteTask = (taskId) => {
     const updatedTask = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTask);
   };
 
+  // Function to toggle the completion status of a task
   const toggleCompletion = (taskId) => {
     const updatedTask = tasks.map((task) =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
@@ -40,6 +48,7 @@ function App() {
     setTasks(updatedTask);
   };
 
+  // Function to calculate and display due date notifications
   const calculateDueDateNotifications = () => {
     const now = new Date();
     const notifiedTasks = new Set();
@@ -63,6 +72,7 @@ function App() {
     });
   };
 
+  // Use an effect to trigger the due date notifications and check for overdue tasks every minute
   useEffect(() => {
     calculateDueDateNotifications();
     // Check for overdue tasks every minute
@@ -70,20 +80,25 @@ function App() {
       calculateDueDateNotifications();
     }, 60000); // Check every minute
 
+    // Clean up the interval when the component unmounts
     return () => {
       clearInterval(intervalId);
     };
   }, [tasks]);
 
+  // Render the main application
   return (
     <div className='App'>
       <h1>Task Tracker App</h1>
+      {/* TaskForm component for adding new tasks */}
       <TaskForm addTask={addTask} />
+      {/* ToastContainer for displaying notifications */}
       <ToastContainer
         className='custom-toast-container'
         position='top-right'
-        autoClose={45000}
+        autoClose={45000} // Notifications automatically close after 45 seconds
       />
+      {/* TaskList component to display the list of tasks */}
       <TaskList
         tasks={tasks}
         editTask={editTask}
